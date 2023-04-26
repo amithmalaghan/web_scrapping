@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bse quotes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<div>
+<table class="table"><thead class="thead-dark"><tr>
+    {% for x in heading%}
+    <th scope="col">{{x}}</th>
+    {% endfor %}
+</tr></thead>
+{% for x in data%}
+<tr>
+ {% for y in x%}
+  <td>{{y}}</td>
+    {% endfor %}
+</tr>
+    {% endfor %}
+</table>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="/bse/{{page-1}}" >Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" >{{page}}</a></li>
+
+    <li class="page-item">
+      <a class="page-link" href="/bse/{{page+1}}">Next</a>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>
